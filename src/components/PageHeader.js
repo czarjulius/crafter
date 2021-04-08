@@ -33,7 +33,7 @@ export default function PageHeader(props) {
         <Card className={classes.pageIcon}>
           {icon}
         </Card>
-        <div>
+        <div className={classes.pageTitle}>
           <Typography variant="6" component="div">{title}</Typography>
           <Typography variant="subtitle2" component="div">{subTitle}</Typography>
         </div>
