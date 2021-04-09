@@ -2,7 +2,7 @@ import { TextField } from '@material-ui/core'
 import React from 'react'
 
 export default function Input(props) {
-  const {name, value, label, onChange} = props
+  const {name, value, label, error=null, onChange} = props
   return (
     <TextField 
       variant="outlined"
@@ -10,8 +10,7 @@ export default function Input(props) {
       name={name}
       value={value}
       onChange={onChange}
-      error
-      helperText="Some validation erros"
+      {...(error && {error:true, helperText:error})}
     />
   )
 }
