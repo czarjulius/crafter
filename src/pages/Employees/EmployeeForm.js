@@ -55,7 +55,8 @@ export default function EmployeeForm() {
   const handleSubmit = (e)=>{
     e.preventDefault();
     if (validate()) {
-      window.alert('testing in progress')
+      employeeService.insertEmployee(values)
+      resetForm()
     }
   }
    
